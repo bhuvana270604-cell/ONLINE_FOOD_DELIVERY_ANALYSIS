@@ -2,62 +2,71 @@
 
 ## Project Overview
 
-This project analyzes an Online Food Delivery dataset to understand customer behavior, order patterns, ratings, delivery time, and other factors related to food delivery services.
-
-The project uses Python for data cleaning, analysis, visualization, and extracting useful insights from the dataset.
+This project analyzes online food delivery orders using Python and Streamlit. The dashboard displays order statistics, city-wise orders, average order value, delivery time, restaurant ratings, and data quality checks.
 
 ## Objectives
 
-- Analyze online food delivery order data
-- Understand customer ordering patterns
-- Analyze customer ratings and feedback
-- Study delivery time and order-related factors
-- Identify important patterns and trends
-- Create visualizations to communicate the findings
+- Analyze online food delivery orders.
+- Explore orders across cities.
+- Calculate average order value and delivery time.
+- Analyze restaurant ratings.
+- Check missing values and duplicate records.
+- Present results through an interactive dashboard.
 
 ## Technologies Used
 
 - Python
 - Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
+- Streamlit
+- MySQL (optional database import)
+- SQLAlchemy
+- PyMySQL
 
-## Project Workflow
+## Dataset Overview
 
-1. Import the dataset
-2. Understand the dataset structure
-3. Perform data cleaning
-4. Handle missing values and duplicate records
-5. Perform exploratory data analysis (EDA)
-6. Analyze important features
-7. Create charts and visualizations
-8. Identify key insights and trends
+- Total records: 7,096
+- Total columns: 28
+- Missing values in the cleaned CSV: 0
+- Duplicate rows in the cleaned CSV: 0
 
-## Analysis Performed
+Dataset: `online_food_delivery_cleaned.csv`
 
-The analysis includes:
+## Dashboard Features
 
-- Data overview and summary statistics
-- Missing value analysis
-- Duplicate value checking
-- Customer and order analysis
-- Rating analysis
-- Delivery time analysis
-- Food/order-related analysis
-- Data visualization
-
-## Key Insights
-
-The project uses data analysis and visualization to identify meaningful patterns in online food delivery orders, customer ratings, and delivery-related factors.
-
-The insights obtained can help understand customer preferences and factors that influence the online food delivery experience.
+- Total Orders, Cities, and Restaurants
+- Average Order Value
+- Average Delivery Time
+- Average Restaurant Rating
+- Top Cities by Number of Orders
+- Missing Values check
+- Duplicate Rows check
+- Column data types overview
 
 ## Project Files
 
-- `online_food_delivery_analysis.ipynb` – Main Jupyter Notebook containing the complete analysis.
+- `app.py` — Streamlit dashboard.
+- `online_food_delivery_cleaned.csv` — Dataset used by the dashboard.
+- `mysql_import.py` — Optional script to import data into MySQL.
+- `online_food_delivery_analysis.png` — Project-related image.
+
+## How to Run
+
+Install the required packages:
+
+```bash
+pip install streamlit pandas
+```
+
+Run the dashboard from the project folder:
+
+```bash
+streamlit run app.py
+```
+
+## Data Quality Note
+
+The dashboard checks missing values and duplicate rows in the supplied cleaned CSV. The current CSV contains no missing values or duplicate rows. The original raw dataset and original cleaning notebook are not included in this repository.
 
 ## Conclusion
 
-This project demonstrates the use of Python and data analysis techniques to explore an Online Food Delivery dataset and generate meaningful insights through data visualization and exploratory analysis.
+This project demonstrates how Python, Pandas, and Streamlit can be used to analyze online food delivery data and present useful information through an interactive dashboard.

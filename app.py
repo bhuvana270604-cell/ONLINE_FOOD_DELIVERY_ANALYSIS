@@ -49,4 +49,22 @@ with col3:
 
 # Orders by City
 st.subheader("🏙️ Top Cities by Number of Orders")
-st.bar_chart(df["City"].value_counts().head(10))
+st.bar_chart(df["City"].value_counts().head(10))   
+
+
+# Data Quality Check
+st.header("🔍 Data Quality Check")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.metric("Missing Values", int(df.isnull().sum().sum()))
+
+with col2:
+    st.metric("Duplicate Rows", int(df.duplicated().sum()))
+
+st.subheader("Missing Values by Column")
+st.dataframe(df.isnull().sum().rename("Missing Count"))
+
+st.subheader("Data Types")
+st.dataframe(df.dtypes.astype(str).rename("Data Type"))
